@@ -1,0 +1,16 @@
+
+<!doctype html>
+<textarea style="width:200px; height: 60px;" id="area"></textarea>
+<script>
+
+  const saveInput = function (e) {
+    localStorage.clear();
+    let areaInput =e.target.value;
+    console.log(areaInput);
+    localStorage.setItem('newInput',areaInput );
+  }
+
+  area.addEventListener('input', saveInput);
+
+  console.log(localStorage.getItem('newInput'))
+</script>
