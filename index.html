@@ -3,11 +3,9 @@
 <textarea style="width:200px; height: 60px;" id="area"></textarea>
 <script>
 
-  const saveInput = function (e) {
-    localStorage.clear();
-    let areaInput =e.target.value;
-    console.log(areaInput);
-    localStorage.setItem('newInput',areaInput );
+  const saveInput = function () {
+    localStorage.clear();    
+    localStorage.setItem('newInput',area.value );
   }
 
   area.addEventListener('input', saveInput);
